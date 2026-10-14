@@ -107,3 +107,29 @@ h2 { font-size: 18px;}
   transform: translate(3px, 3px);
   box-shadow: none
 }
+
+.btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  margin-top: 8px;
+  padding: 8px 10px;
+  color: var(--ink);
+  background: var(--brown);
+  border: 3px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  cursor: pointer;
+}
+
+.btn:hover { background: var(--tan); }
+
+.btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+.badge {
+  margin-left: 6px;
+  padding: 0 6px;
+  background: var(--orange);
+  border: 2px solid var(--ink);
+}
