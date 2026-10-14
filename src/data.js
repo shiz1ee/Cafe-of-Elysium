@@ -89,4 +89,3 @@ const make = (cat, list) =>
         ['PannaCotta', 'Panna Cotta', 5],
       ]),
     ]
-    console.log(ITEMS.filter((i) => typeof i.price !== 'number'))

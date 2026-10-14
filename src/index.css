@@ -55,3 +55,55 @@ nav a.active { background: var(--brown);}
 
 main { padding: 20px;}
 h2 { font-size: 18px;}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  padding: 14px;
+  text-align: center;
+}
+
+.item-name { margin-top: 6px; }
+.price {color: var(--brown);}
+
+.icon { image-rendering: pixelated;}
+
+.card:hover .icon {
+  animation: hop 0.4s steps(2) infinite;
+}
+
+@keyframes hop {
+  50% {transform: translateY(-6px);}
+}
+
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: var(--tan);
+  border: 3px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  cursor: pointer;
+}
+
+.tab.on {background: var(--brown);}
+
+.tab:active {
+  transform: translate(3px, 3px);
+  box-shadow: none
+}
