@@ -22,7 +22,7 @@ export default function Menu() {
                 ))}
             </div>
 
-            <div className="grit">
+            <div className="grid">
                 {ITEMS.filter((item) => item.cat === cat).map((item) => (
                     <div className="card" key={item.id}>
                         <img className="icon" src={item.img} alt={item.name} width="96" height= "96" />

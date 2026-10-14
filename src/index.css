@@ -34,7 +34,7 @@ header {
 }
 
 .logo {
-  font-family: 'Press Start 2P' monospace;
+  font-family: 'Press Start 2P', monospace;
   font-size: 14px;
   color: var(--ink);
   text-decoration: none;
@@ -58,8 +58,9 @@ h2 { font-size: 18px;}
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
 }
 
 .card {
@@ -83,7 +84,7 @@ h2 { font-size: 18px;}
   50% {transform: translateY(-6px);}
 }
 
-.tab {
+.tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
