@@ -3,11 +3,22 @@ import Kitchen from "./pages/Kitchen";
 import Menu from "./pages/Menu";
 import {Routes, Route, NavLink } from 'react-router-dom'
 import { useStore } from "./store";
+import { useState } from "react";
+import Splash from './components/Splash'
 
 export default function App() {
   const {count} = useStore()
+  const [splash, setSplash] = useState(() => !sessionStorage.getItem('splashSeen'))
   return (
     <>
+      {splash && (
+  <Splash
+    onDone={() => {
+      sessionStorage.setItem('splashSeen', '1')
+      setSplash(false)
+    }}
+  />
+)}
       <header>
         <NavLink to="/" className="logo">Cafe of Elysium</NavLink>
         <nav>
