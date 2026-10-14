@@ -61,6 +61,7 @@ h2 { font-size: 18px;}
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 900px;
+  margin: 0 auto;
 }
 
 .card {
@@ -87,8 +88,10 @@ h2 { font-size: 18px;}
 .tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 24px;
+  max-width: 900px;
 }
 
 .tab {
@@ -213,3 +216,65 @@ h3 { font-size: 14px; margin-top: 28px;}
 
 .pill.preparing {background: var(--orange);}
 .pill.done {background: var(--green); color: #fff;}
+
+
+.rail {
+  height: 14px;
+  background: #8d8d8d;
+  border: 3px solid var(--ink);
+  box-shadow: 0 4px 0 var(--ink);
+}
+
+.tickets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 16px 6px 20px;
+}
+
+.ticket {
+  position: relative;
+  width: 190px;
+  padding: 22px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  border-top-width: 10px;
+  box-shadow: 4px 4px 0 var(--ink);
+  transform: rotate(var(--tilt));
+  transform-origin: top center;
+}
+
+.ticket ul {margin: 0; padding-left: 18px;}
+
+.pin { 
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  background: var(--orange);
+  border: 2px solid var(--ink);
+}
+
+.t-head { font-family: 'Press Start 2P', monospace; font-size: 11px;}
+.t-name { opacity: 0.8;}
+
+.t-new { border-top-color: #e8c547;}
+.t-preparing { border-top-color: var(--orange);}
+.t-done { border-top-color: var(--green);}
+
+.stamp {
+  align-self: flex-end;
+  color: var(--green);
+  border: 3px solid var(--green);
+  padding: 2px 8px;
+  transform: rotate(-8deg);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+}
+
+.row.between {justify-content: space-between; margin-top: 28px;}
