@@ -5,6 +5,7 @@ import {Routes, Route, NavLink } from 'react-router-dom'
 import { useStore } from "./store";
 import { useState } from "react";
 import Splash from './components/Splash'
+import Music from './components/Music.jsx'
 
 export default function App() {
   const {count} = useStore()
@@ -34,6 +35,10 @@ export default function App() {
           <Route path="/kitchen" element={<Kitchen />} />
         </Routes>
       </main>
+      <footer className="foot">
+  Dessert icons by Ellielza (Ellie Jerram), CC BY 4.0 · Music: Cozy &amp; Cute Music by ignatiuscrose (Courtney Rose), CC BY 4.0
+</footer>
+<Music />
     </>
   )
 }
