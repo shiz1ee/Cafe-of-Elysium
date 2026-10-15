@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ITEMS } from '../data.js'
 import { useStore } from '../store.jsx'
 import { useState } from 'react'
+import { playSound } from '../sounds.js'
 
 
 const LABEL = { new: 'Order received', preparing: 'Cooking...', done: 'Ready!' }
@@ -24,6 +25,7 @@ export default function Cart() {
         lines.map((l) => ({name: l.name, qty: l.qty}))
     )
     setPlaced(id)
+    playSound('/sounds/ding.mp3')
     setName('')
   }
 

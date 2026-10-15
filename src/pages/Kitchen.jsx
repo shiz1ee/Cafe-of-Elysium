@@ -1,4 +1,6 @@
 import { useStore } from '../store.jsx'
+import { playSound } from '../sounds.js'
+
 const NEXT = {
     new: ['preparing', 'Start cooking'],
     preparing: ['done', 'Mark done'],
@@ -22,7 +24,10 @@ function Ticket({ order, index }) {
                 ))}
             </ul>
             {next && (
-                <button className="btn" onClick={() => setStatus(order.id, next[0])}>
+                <button className="btn" onClick={() => {
+                    setStatus(order.id, next[0])
+                    if (next[0] === 'done') playSound('/sounds/done.mp3')
+                }}>
                     {next[1]}
                 </button>
             )}
