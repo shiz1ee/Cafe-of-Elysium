@@ -335,3 +335,5 @@ h3 { font-size: 14px; margin-top: 28px;}
   font-size: 18px;
   opacity: 0.8;
 }
+
+.blink {animation: blink 1s steps(2) infinite;}
