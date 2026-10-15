@@ -5,9 +5,25 @@ import { useStore } from "../store";
 export default function Menu() {
     const { add, cart } = useStore()
     const [cat, setCat] = useState(CATEGORIES[0].id)
+    const [open, setOpen] = useState(() => !!sessionStorage.getItem('bookSeen'))
+
+    if (!open) {
+        return (
+            <div className="book-wrap">
+                <button
+                className="cover"
+                onClick={() => {sessionStorage.getItem('bookSeen', '1'); setOpen(true)}}
+                >
+                    <span className="cover-title">MENU</span>
+                    <span className="cover-sub">Cafe of Elysium</span>
+                    <span className="blink">click to open</span>
+                </button>
+            </div>
+        )
+    }
 
     return (
-        <div>
+        <div className="menu-open">
             <h2>Menu</h2>
 
             <div className="tabs">
