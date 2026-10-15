@@ -380,3 +380,77 @@ h3 { font-size: 14px; margin-top: 28px;}
   from { transform: scaleX(0.2);}
   to { transform: scaleX(1);}
 }
+
+.book {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  max-width: 960px;
+  min-height: 460px;
+  margin: 20px auto;
+  background: var(--paper);
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 var(ink);
+}
+
+/*the line between the book*/
+
+.book::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 38.5%;
+  width: 4px;
+  background: var(--ink);
+  opacity: 0.25;
+}
+
+.page {padding: 28px;}
+.page-left {background: #f5e8d2;}
+
+.book .grid {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: none;
+  margin: 0;
+  }
+
+.book .tabs {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  transform: translateX(100%);
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 6px;
+  margin: 0;
+  max-width: none;
+  z-index: 2;
+}
+
+.book .tab {
+  border-left: 0;
+  box-shadow: none;
+  text-align: left;
+}
+
+.book .tab.on {transform: translateX(8px);}
+
+@media (max-width: 720px) {
+  .book {grid-template-columns: 1fr;}
+  .book::after {display: none;}
+
+  .book .tabs {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .book .tab {border-left: 3px solid var(--ink);}
+  .book .tab.on {transform: none; box-shadow: 3px 3px 0 var(--ink);}
+  .page .left {padding: 16px 20px 0;}
+  .page .right {padding: 16px;}
+}

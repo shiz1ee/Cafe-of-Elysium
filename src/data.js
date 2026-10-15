@@ -1,9 +1,9 @@
 export const CATEGORIES = [
-    {id: 'cakes', name: 'Cakes'},
-    {id: 'pastries', name: 'Pastries'},
-    {id: 'pancakes', name: 'Pancakes'},
-    {id: 'sweets', name: 'Sweets'},
-    {id: 'pots', name: 'Pots'},
+    {id: 'cakes', name: 'Cakes', color: '#c98b8b', blurb: 'Slices cute freshly every morning.'},
+    {id: 'pastries', name: 'Pastries', color: '#d9a05b', blurb: 'Flaky, buttery, still warm.'},
+    {id: 'pancakes', name: 'Pancakes', color: '#b98a5e', blurb: 'Stacked high, syrub on the side.'},
+    {id: 'sweets', name: 'Sweets', color: '#8aa66a', blurb: 'Little treats for the sweet tooth.'},
+    {id: 'pots', name: 'Pots', color: '#7f9bb0', blurb: 'Layered, creamy, and spoon-ready.'},
 ]
 
 const make = (cat, list) =>
