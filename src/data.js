@@ -87,7 +87,7 @@ const make = (cat, list) =>
         ['LemonBlueberryPot', 'Lemon Blueberry Pot', 4],
         ['MintChocolatePot', 'Mint Choco Pot', 4],
         ['RaspberryCheesecakePot', 'Raspberry Cheesecake Pot', 4.5],
-        ['CremeCaramel', 'Creme Caramel', 4.5],
+        ['CremeCaramel', 'Creme Caramel', 4],
         ['PannaCotta', 'Panna Cotta', 5],
       ]),
       ...make('hot', [
