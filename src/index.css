@@ -455,3 +455,24 @@ h3 { font-size: 14px; margin-top: 28px;}
   .page .left {padding: 16px 20px 0;}
   .page .right {padding: 16px;}
 }
+
+.special {
+  margin-top: 28px;
+  padding: 14px;
+  text-align: center;
+  background: var(--cream);
+  border: 3px dashed var(--ink);
+}
+
+.special-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.special-name {
+  font-size: 26px;
+  margin-top: 8px;
+}
+
+.special .price { font-size: 24px; }

@@ -6,7 +6,9 @@ export default function Menu() {
     const { add, cart } = useStore()
     const [cat, setCat] = useState(CATEGORIES[0].id)
     const [open, setOpen] = useState(() => !!sessionStorage.getItem('bookSeen'))
-    const cuttent = CATEGORIES.find((c) => c.id === cat)
+    const current = CATEGORIES.find((c) => c.id === cat)
+    const day = Math.floor(Date.now() / 86400000)
+    const special = ITEMS[day % ITEMS.length]
 
     if (!open) {
         return (
@@ -39,8 +41,15 @@ export default function Menu() {
             </div>
 
             <section className="page left">
-                <h2>{cuttent.name}</h2>
-                <p>{cuttent.blurb}</p>
+                <h2>{current.name}</h2>
+                <p>{current.blurb}</p>
+                <div className="special">
+                    <div className="special-label">Today's Special</div>
+                    <img className= "icon" src={special.img} alt={special.name} width="96" height="96"/>
+                    <div className="item-name">{special.name}</div>
+                    <div className="price">${special.price.toFixed(2)}</div>
+                    <button className="btn" onClick={() => add(special.id)}>Add</button>
+                </div>
             </section>
 
             <section className="page right"> 
