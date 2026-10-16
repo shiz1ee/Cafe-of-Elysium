@@ -4,6 +4,8 @@ export const CATEGORIES = [
     {id: 'pancakes', name: 'Pancakes', color: '#b98a5e', blurb: 'Stacked high, syrub on the side.'},
     {id: 'sweets', name: 'Sweets', color: '#8aa66a', blurb: 'Little treats for the sweet tooth.'},
     {id: 'pots', name: 'Pots', color: '#7f9bb0', blurb: 'Layered, creamy, and spoon-ready.'},
+    {id: 'hot', name: 'Coffee & Tea', color: ' #a68bb5', blurb: 'Warm cups, made to order.'},
+    {id: 'cold', name: 'Cold Drinks', color: ' #8fb8a8', blurb: 'Iced, fruity, and fizzy.'},
 ]
 
 const make = (cat, list) =>
@@ -88,4 +90,28 @@ const make = (cat, list) =>
         ['CremeCaramel', 'Creme Caramel', 4.5],
         ['PannaCotta', 'Panna Cotta', 5],
       ]),
+      ...make('hot', [
+        ['espresso', 'Espresso', 3],
+        ['latte', 'Latte', 3.5],
+        ['hot_chocolate', 'Hot Chocolate', 4.5],
+        ['tea_black', 'Black Tea', 3],
+        ['tea_green', 'Green Tea', 3],
+        ['tea_boba', 'Boba Tea', 5],
+      ]),
+      ...make('cold', [
+        ['milk_glass', 'MILK', 2.5],
+        ['strawberry_smoothie', 'Strawberry Smoothie', 5],
+        ['coconut_water', 'CocoNut Water', 3.5],
+        ['cola_glass', 'Cola', 2.5],
+        ['cucumber_water', 'Cucumber Water', 3.5],
+        ['water_glass', 'Water', 1],
+        ['juice_apple', 'Apple Juice', 3.5],
+        ['juice_grape', 'Grape Juice', 3.5],
+        ['juice_kiwi', 'Kiwi Juice', 4],
+        ['juice_lemonade', 'Lemonade', 3.5],
+        ['juice_mango', 'Mango Juice', 4],
+        ['juice_orange', 'Orange Juice', 3.5],
+        ['juice_tomato', 'Tomato Juice', 3.5],
+        ['juice_watermelon', 'Watermelon Juice', 4],
+      ])
     ]
