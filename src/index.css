@@ -476,3 +476,31 @@ h3 { font-size: 14px; margin-top: 28px;}
 }
 
 .special .price { font-size: 24px; }
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 150px;
+  padding: 10px 14px;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.stat span { opacity: 0.7;}
+.stat b {font-size: 27px;}
+
+.timer { opacity: 0.8;}
+
+.ticket.late {background: #f8e3c4; border-top-color: var(--orange);}
+
+.ticket.very-late { background: #f1cfc4; border-top-color: #b5483a;}
+.ticket.very-late .timer { color: #8f2f22; opacity: 1;}

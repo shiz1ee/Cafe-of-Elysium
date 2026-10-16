@@ -50,7 +50,8 @@ export function StoreProvider({children}) {
     const setStatus = (id, status) =>
         setOrders((o) => o.map((x) => (x.id === id ? { ...x, status } : x)))
 
-    const clearDone = () => setOrders((o) => o.filter((x) => x.status !== 'done'))
+    const clearDone = () =>
+        setOrders((o) => o.map((x) => (x.status === 'done' ? { ...x, hidden: true } : x)))
     
 
     const count = Object.values(cart).reduce((a, b) => a + b, 0)

@@ -22,7 +22,7 @@ export default function Cart() {
   const place = () => {
     const id = placeOrder(
         name.trim(),
-        lines.map((l) => ({name: l.name, qty: l.qty}))
+        lines.map((l) => ({name: l.name, qty: l.qty, price: l.price }))
     )
     setPlaced(id)
     playSound('/sounds/ding.mp3')
